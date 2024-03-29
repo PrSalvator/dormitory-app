@@ -1,0 +1,31 @@
+/*.main{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid var(--search-border-color);
+    height: 60px;
+}
+input, select{
+    border-width: 0px;
+    background-color: transparent;
+    font-size: var(--default-font-size);
+    font-weight: var(--default-font-weight);
+}
+option{
+    background-color: red;
+}
+input:focus, select:focus{
+    outline: none;
+    border-color: aqua;
+    border-width: 0px;
+}
+.main div{
+    height: 100%;
+    border-right: 1px solid var(--search-border-color);
+}*/
+option{
+    padding: 14px 0px;
+}
+option:hover{
+    background-color: red;
+}

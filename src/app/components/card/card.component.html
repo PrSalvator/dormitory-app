@@ -1,0 +1,16 @@
+
+<div class="card col-12">
+    <img class="card-img-top" [src]="src">
+    <div class="card-body">
+        <div class="heart" (click)="click()">
+            <i *ngIf="!isVavorite; else elseBlock" class="bi bi-heart"></i>
+            <ng-template #elseBlock>
+                <i class="bi bi-heart-fill"></i>
+            </ng-template>
+        </div>
+        <p class="title mt-1" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{title}}</p>
+        <p style="font-size: 18px; font-weight: 500;">{{price | rank}} ₽</p>
+        <p style="font-size: 14px;">{{name}} <i class="bi bi-star-fill" style="color: #FFE600;"></i> {{rating}}</p>
+        <p style="font-size: 14px; color: gray; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{address}}</p>
+    </div>
+</div>

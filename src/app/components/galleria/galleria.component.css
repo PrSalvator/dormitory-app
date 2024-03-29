@@ -1,0 +1,42 @@
+::ng-deep .p-galleria-thumbnail-container{
+    background-color: transparent;
+}
+::ng-deep .p-galleria-thumbnail-prev, ::ng-deep .p-galleria-thumbnail-next{
+    color: var(--green-color);
+}
+::ng-deep .p-galleria-thumbnail-prev:hover, ::ng-deep .p-galleria-thumbnail-next:hover{
+    color: var(--light-green-color);
+}
+::ng-deep .p-galleria-thumbnail-item-current img{
+    border: 2px solid var(--green-color);
+}
+.box img {
+    width:80px;
+    height:80px;
+    object-fit:cover;
+}
+.back-img{
+    height: 355px;
+    object-fit:cover;
+    filter: blur(10px);
+}
+.back-wrapper{
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.front-img{
+    height: 355px;
+    width: 100%;
+    object-fit:contain;
+}
+.div{
+    overflow: hidden;
+}
+::ng-deep .p-galleria-item-nav{
+    display: none;
+    top:45%;
+}
+::ng-deep .p-galleria-item-container:hover button{
+    display: inline-flex;
+}

@@ -1,0 +1,39 @@
+div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+img{
+    margin-right: 8px;
+}
+button{
+    height: 55px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-weight: var(--button-font-weight);
+    font-size: var(--button-font-size);
+    background-color: var(--dark-green-color);
+    transition-duration: 300ms;
+    transition-property: background-color;
+    cursor: pointer;
+    user-select: none;
+    border-width: 0px;
+    color: white;
+}
+button:hover{
+    background-color: var(--green-color);
+}
+button:disabled{
+    background-color: var(--disabled-button-color);
+    color: var(--disabled-button-text-color);
+    cursor: default;
+}
+button:active{
+    background-color: var(--light-green-color);
+}
+:host(.search) button{
+    width: 100%;
+    border-radius: 0px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+}

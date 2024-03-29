@@ -1,0 +1,13 @@
+<p-galleria [value]="images" [numVisible]="4" [showItemNavigators]="true" [circular]="true">
+    <ng-template pTemplate="item" let-item>
+        <div class="back-wrapper w-100">
+            <img [src]="item" class="back-img w-100">
+        </div>
+        <img [src]="item" class="front-img" on/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="box col-2">
+            <img [src]="item"/>
+        </div>
+    </ng-template>
+</p-galleria>

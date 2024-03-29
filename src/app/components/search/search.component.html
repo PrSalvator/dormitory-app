@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row border rounded-5">
+    <div class="col-2 border-end d-flex align-items-center">
+      <app-select class="mx-auto" [values]="values"></app-select>
+    </div>
+    <div class="col-7 d-flex">
+      <input type="text" class=" w-100 form-control focus-ring border-0" style="--bs-focus-ring-width: 0px;" id="inputText" placeholder="Поиск по объявлениям">
+    </div>
+    <div class="col-2 border-start d-flex align-items-center">
+      <app-select class="mx-auto" [values]="values"></app-select>
+    </div>
+    <div class="col-1 p-0">
+      <app-button class="search" label="Поиск"></app-button>
+    </div>
+  </div>
+</div>
+

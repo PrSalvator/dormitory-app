@@ -1,0 +1,14 @@
+input{
+    width: 24px;
+    height: 24px;
+}
+input:hover{
+    border-color: var(--green-color);
+}
+input:checked{
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+}
+input:focus{
+    border-color: var(--green-color);
+}

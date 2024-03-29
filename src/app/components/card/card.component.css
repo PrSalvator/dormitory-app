@@ -1,0 +1,41 @@
+.card img{
+    height: 275px;
+    object-fit: cover;
+}
+.card{
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px var(--light-gray-color);
+    border-width: 0px;
+}
+.card-body{
+    height: 128px;
+}
+.title{
+    color: var(--green-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+p{
+    margin: 0px;
+}
+.heart{
+    padding-top: 8px;
+    text-align: center;
+    height: 46px;
+    width: 46px;
+    background-color: white;
+    position: absolute;
+    bottom: 105px;
+    font-size: 22px;
+    border-radius: 50%;
+    margin-left: 70%;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.heart:hover{
+    color: var(--green-color);
+}
+.bi-heart-fill{
+    color:var(--green-color);
+}

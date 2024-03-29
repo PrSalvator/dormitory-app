@@ -1,0 +1,41 @@
+/*div{
+    display: flex;
+    align-items: center;
+}
+.header{
+    height: fit-content;
+    padding: 8px 0px;
+}
+img.icon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    display: block;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    & li:last-child{
+        margin-right: 0px;
+    }
+}
+li{
+    margin-right: 20px;
+}
+*/
+.icon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    mask-repeat: no-repeat;
+    background-color: var(--gray-color);
+    transition-duration: 300ms;
+    transition-property: background-color;
+}
+.icon:hover{
+    background-color: var(--green-color);
+}

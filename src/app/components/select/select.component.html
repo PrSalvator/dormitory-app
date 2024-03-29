@@ -1,0 +1,11 @@
+<form>
+  <div #select class="__select" data-state="">
+    <div #selectTitle class="__select__title" (click)="selectTitleClick()">{{values[0]}}</div>
+    <div class="__select__content">
+        <ng-template ngFor let-item [ngForOf]="values" let-i="index">
+            <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect"/>
+            <label (click)="labelClick($event)" for="singleSelect0" class="__select__label">{{item}}</label>
+        </ng-template>
+    </div>
+  </div>
+</form>
