@@ -27,6 +27,13 @@ li{
     margin-right: 20px;
 }
 */
+svg{
+    fill: var(--gray-color);
+}
+.user{
+    border-radius: 50%;
+    object-fit: cover;
+}
 .icon{
     cursor: pointer;
     width: 30px;

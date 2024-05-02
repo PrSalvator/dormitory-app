@@ -1,0 +1,37 @@
+button{
+    border: 0;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+button:hover{
+    border: 1px var(--gray-color) solid;
+}
+
+button:active{
+    border: 1px var(--green-color) solid;
+    color: var(--dark-green-color);
+    background-color: var(--limpid-green-color);
+}
+
+button.elipses{
+    border: 0;
+    color: black;
+    background-color: transparent;
+    cursor: default;
+}
+
+button:disabled{
+    border: 1px var(--limpid-gray-color) solid;
+    color: var(--limpid-gray-color);
+}
+
+button.selected{
+    border: 1px var(--green-color) solid;
+    color: var(--dark-green-color);
+    background-color: var(--limpid-green-color);
+}
+button.arrow{
+    border: 1px var(--gray-color) solid;
+}

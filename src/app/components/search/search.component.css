@@ -1,31 +1,22 @@
-/*.main{
-    display: flex;
-    align-items: center;
-    border-radius: 30px;
-    border: 1px solid var(--search-border-color);
-    height: 60px;
+@import "./search.component.scss";
+input:focus, input{
+    border: 0;
+    outline: 0;
 }
-input, select{
-    border-width: 0px;
-    background-color: transparent;
-    font-size: var(--default-font-size);
-    font-weight: var(--default-font-weight);
+.border{
+    height: 55px;
+    overflow: hidden;
 }
-option{
-    background-color: red;
+.border:has(input:active){
+    border: black 1px solid;
 }
-input:focus, select:focus{
-    outline: none;
-    border-color: aqua;
-    border-width: 0px;
+.border:has(input:focus){
+    border: 1px var(--dark-green-color) solid !important;
 }
-.main div{
-    height: 100%;
-    border-right: 1px solid var(--search-border-color);
-}*/
-option{
-    padding: 14px 0px;
+.border:has(input:focus) > app-button{
+    background-color: var(--dark-green-color);
 }
-option:hover{
-    background-color: red;
+svg{
+    fill: var(--gray-color);
+    cursor: pointer;
 }

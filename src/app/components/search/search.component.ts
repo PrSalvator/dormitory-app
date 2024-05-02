@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './search.component.css'
 })
 export class SearchComponent {
-  values:string[] = [
-    "Вершинина 46",
-    "Вершинина 39",
-    "Кирова 2",
-    "Вершинина 48"
-  ]
+  value?: string;
+
+  clean(){
+    this.value = undefined;
+  }
 }

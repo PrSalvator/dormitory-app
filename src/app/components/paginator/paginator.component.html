@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center" *ngIf="lastPage !== 1">
+    <button [disabled]="pages[0] == 1" (click)="scrollLeft()" class="button-1 font-weight-medium rounded-1 arrow me-2">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <div #container>
+        <ng-template  ngFor let-page [ngForOf]="pages">
+            <button (click)="pageClick($event)" class="button-1 font-weight-medium rounded-1 me-2">
+                {{page}}
+            </button>
+        </ng-template>
+    </div>
+    <div *ngIf="pages[pages.length - 1] !== lastPage">
+        <button  class="elipses">...</button>
+        <button (click)="lastPageClick()" class="button-1 font-weight-medium rounded-1 me-2">
+            {{lastPage}}
+        </button>
+    </div>
+
+    <button [disabled]="pages[pages.length - 1] == lastPage" (click)="scrollRight()" class="button-1 font-weight-medium rounded-1 arrow">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+</div>

@@ -1,0 +1,24 @@
+<div class="px-4 py-3" class="d-flex flex-column align-items-center">
+    <p-skeleton shape="circle" size="100px" *ngIf="skeleton; else elseImg"></p-skeleton>
+    <ng-template #elseImg>
+        <div style="border-radius: 50%; overflow: hidden; height: 100px; width: 100px;">
+            <img [src]="src" style="width: 100px; height: 100px; object-fit: cover;"/>
+        </div>
+    </ng-template>
+    <p-skeleton *ngIf="skeleton; else elseName" styleClass="my-2" width="150px"></p-skeleton>
+    <ng-template #elseName>
+        <h4 class="mt-2" style="font-weight: 600;">{{name}} {{surname}}</h4>
+    </ng-template>
+    <div class="d-flex align-items-center justify-content-center ms-1">
+        <p-skeleton *ngIf="skeleton; else elseInfo" width="200px" styleClass="my-2"></p-skeleton>
+        <ng-template #elseInfo>
+            <p class="m-0" style="font-size: 14px;">{{rating}}</p>
+            <p-rating class="mx-1" [(ngModel)]="rating" [cancel]="false" [readonly]="true"></p-rating>
+            <p class="mx-1 my-0" style="font-size: 14px; color: var(--dark-green-color); cursor: pointer;">{{feedBackCount}} {{feedBack}}</p>
+        </ng-template>
+    </div>
+    <p-skeleton *ngIf="skeleton; else elseYear" width="150px" styleClass="mt-2"></p-skeleton>
+    <ng-template #elseYear>
+        <p class="mx-1 mt-2" style="font-size: 14px;">На [названии] с {{date.getFullYear()}} года</p>
+    </ng-template>
+</div>

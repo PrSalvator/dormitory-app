@@ -1,0 +1,16 @@
+::ng-deep .p-icon-wrapper svg{
+    height: 15px;
+    width: 15px;
+}
+::ng-deep .p-rating{
+    gap: 2px;
+}
+::ng-deep .p-rating-item.p-rating-item-active .p-rating-icon{
+    color: var(--yealow-color);
+}
+::ng-deep .p-rating:not(.p-disabled):not(.p-readonly) .p-rating-item:hover .p-rating-icon {
+    color: var(--yealow-color);
+}
+::ng-deep .p-icon.p-rating-icon {
+    color: var(--light-gray-color);
+}

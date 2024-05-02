@@ -1,0 +1,5 @@
+::ng-deep app-button.write-message button{
+    background-color: var(--light-green-color);
+    width: 100%;
+    color: var(--dark-green-color);
+}

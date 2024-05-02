@@ -1,0 +1,6 @@
+::ng-deep .p-carousel-indicators{
+    display: none;
+}
+div{
+    cursor: pointer;
+}

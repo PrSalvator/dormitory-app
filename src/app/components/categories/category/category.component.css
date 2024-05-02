@@ -1,0 +1,8 @@
+div{
+    transition-property: background-color;
+    background-color: white;
+}
+
+:host(.active) div, div:hover{
+    background-color: var(--limpid-green-color);
+}

@@ -1,0 +1,21 @@
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+@include media-breakpoint-up(xxl) {
+  .__select__title{
+    width: 160px;
+  }
+  .__select__label{
+    max-height: 40px;
+  }
+}
+
+@include media-breakpoint-down(xxl) {
+  .__select__title{
+    width: 135px;
+  }
+  .__select__label{
+    max-height: 35px;
+  }
+}

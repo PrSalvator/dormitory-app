@@ -1,4 +1,6 @@
 import { Component, Input} from '@angular/core';
+import { IUser } from '../../models/user';
+import { IOffer } from '../../models/offer';
 
 @Component({
   selector: 'app-card',
@@ -7,12 +9,8 @@ import { Component, Input} from '@angular/core';
 })
 //Вероятнее всего сюда будет передоваться json с информацией о товаре и продавце
 export class CardComponent {
-  @Input() src:string = '/../../../assets/no-image.svg';
-  @Input() title:string = 'Без названия';
-  @Input() price:string = '0';
-  @Input() address:string = 'Адрес неизвестен';
-  @Input() rating:string = '0';
-  @Input() name:string = '';
+  @Input() offer?: IOffer;
+  @Input() skeleton:boolean = false;
   isVavorite:boolean = false;
 
   click(){

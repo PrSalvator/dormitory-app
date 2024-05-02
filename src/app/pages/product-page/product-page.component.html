@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12  mt-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                  <li class="breadcrumb-item"><a href="#">Аксессуары</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Головные уборы</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="col-4 mb-3">Шапка банная</h1>
+        <h1 class="col-3 offset-5">20233 ₽</h1>
+    </div>
+    <div class="row mb-3">
+        <div class="d-flex col-4">
+            <app-button label="Добавить в избранное" class="me-3"></app-button>
+            <app-button label="Поделиться"></app-button>
+        </div>
+        <app-button label="Написать продавцу" class="col-3 offset-5 write-message"></app-button>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <app-galleria [images]="images"></app-galleria>
+        </div>
+        <div class="col-3 offset-3 bg-primary">
+
+        </div>
+    </div>
+</div>

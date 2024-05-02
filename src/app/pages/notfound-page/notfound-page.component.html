@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <app-paginator [totalOnOnePage]=10 [totalRecords]=560></app-paginator>
+        <app-search class="col-xl-10 col-12 offset-xl-1"></app-search>
+        <!--<app-carousel class="mt-3"></app-carousel>-->
+    </div>
+    <div class="row mt-5">
+        <app-slider class="col-4"></app-slider>
+        <app-check-box label="CB1" class="mt-5"></app-check-box>
+        <app-check-box label="CB2" class="mt-5"></app-check-box>
+        <app-check-box label="CB3" class="mt-5"></app-check-box>
+    </div>
+    <!--<div class="row my-5 col-8">
+        <app-card [skeleton]="true" class="col-4" name="Макар" price="3000000" rating="5" title="Очки крутые гучи настолько крутый что сам" src=".././assets/glasses.jpg" address="ул.Вершинина 46 ул.Вершинина 46 ул.Вершинина 46"></app-card>
+        <app-card class="col-4" name="Катя" price="123000" rating="4.6" title="Наушники Dolbit Normal`no" src=".././assets/kate.jpg" address="Вершинина 39"></app-card>
+        <app-card class="col-4" name="Даниил" price="1500" rating="4.5" title="Экскурсии по мостам Томска" src=".././assets/bridge.jpg" address="Вершинина 48"></app-card>
+    </div>-->
+    <div class="row my-4">
+      <app-seller-card [skeleton]="true" src=".././assets/irina.jpg" name="Ирина" surname="Марьянова" [feedBackCount]=22 [rating]=4.5 class="col-3"></app-seller-card>
+      <app-seller-card src=".././assets/daniil.jpg" name="Даниил" surname="Ковалев" [feedBackCount]=130 [rating]=5 class="col-3"></app-seller-card>
+      <app-seller-card src=".././assets/kirill.jpg" name="Кирилл" surname="Леонов" [feedBackCount]=45 [rating]=4 class="col-3"></app-seller-card>
+      <app-seller-card class="col-3"></app-seller-card>
+    </div>
+  
+    <h1>Типография</h1>
+    <div class="p-3" style="border: 3px solid red;">
+      <h1>Заголовок уровень 1</h1>
+      <h2>Заголовок уровень 2</h2>
+      <h3>Заголовок уровень 3</h3>
+    </div>
+  
+    <h1>Основной текст</h1>
+    <div class="p-3" style="border: 3px solid red;">
+      <p class="basic-1">basic-1 24px R</p>
+      <p class="basic-2">basic-2 22px R</p>
+      <p class="basic-3">basic-3 20px R</p>
+      <p class="basic-4">basic-4 18px R</p>
+      <p class="basic-5">basic-5 16px R</p>
+      <p class="basic-6">basic-6 14px R</p>
+    </div>
+  
+    <h1>Меню личного кабинета</h1>
+    <div class="p-3" style="border: 3px solid red;">
+      <p class="menu">menu Текст меню ЛК 20px M</p>
+    </div>
+  
+    <h1>Текст на кнопках</h1>
+    <div class="p-3" style="border: 3px solid red;">
+      <p class="btn-primary button-1"> button-1 Текст кнопки 16px R</p>
+      <p class="btn-primary button-1m"> button-1m Текст кнопки 16px M</p>
+      <p class="btn-primary button-2"> button-2 Текст кнопки 12px R</p>
+    </div>
+  
+    <h1>Текст на карточках</h1>
+    <div class="p-3" style="border: 3px solid red;">
+      <p class="card-1s">card-1s Текст на карточках 24px S</p>
+      <p class="card-2m">card-2m Текст на карточках 20px M</p>
+      <p class="card-3m">card-3m Текст на карточках 18px M</p>
+      <p class="card-4m">card-4m Текст на карточках 16px M</p>
+      <p class="card-5">card-5 Текст на карточках 14px R</p>
+      <p class="card-5m">card-5m Текст на карточках 14px M</p>
+      <p class="card-6">card-6 Текст на карточках 12px R</p>
+      <p class="card-6m">card-6m Текст на карточках 12px M</p>
+    </div>
+
+    <div class="row my-5">
+      <app-card [skeleton]="true" class="col-3"></app-card>
+      <app-seller-card [skeleton]="true" class="col-3"></app-seller-card>
+      <app-feed-back [skeleton]="true" class="mt-3 col-4"></app-feed-back>
+      <app-contact [skeleton]="true" class="my-3 col-4"></app-contact>
+    </div>
+
+    <div class="row my-5 w-50">
+      <!--<app-categories [categories]="categories"></app-categories>-->
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d655.380197270344!2d84.96331720020436!3d56.460397060406024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43269352db4b9ab9%3A0xf343af84908b5f4!2z0J7QsdGJ0LXQttC40YLQuNC1IOKEliAxNiDQotCf0KM!5e0!3m2!1sru!2sru!4v1713718967524!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>

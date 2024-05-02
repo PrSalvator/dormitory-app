@@ -1,16 +1,27 @@
 
-<div class="card col-12">
-    <img class="card-img-top" [src]="src">
+<div class="card">
+    <p-skeleton *ngIf="skeleton; else elseBlock" height="275px" borderRadius="0px"></p-skeleton>
+    <ng-template #elseBlock>
+        <img [src]="offer?.offerDetails!.photoURLList[0]" onerror="this.src=''">
+    </ng-template>
     <div class="card-body">
-        <div class="heart" (click)="click()">
-            <i *ngIf="!isVavorite; else elseBlock" class="bi bi-heart"></i>
-            <ng-template #elseBlock>
+        <div *ngIf="!skeleton" class="heart" (click)="click()">
+            <i *ngIf="!offer?.offerDetails?.inFavorite; else elseBlock1" class="bi bi-heart"></i>
+            <ng-template #elseBlock1>
                 <i class="bi bi-heart-fill"></i>
             </ng-template>
         </div>
-        <p class="title mt-1" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{title}}</p>
-        <p style="font-size: 18px; font-weight: 500;">{{price | rank}} ₽</p>
-        <p style="font-size: 14px;">{{name}} <i class="bi bi-star-fill" style="color: #FFE600;"></i> {{rating}}</p>
-        <p style="font-size: 14px; color: gray; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{address}}</p>
+        <div *ngIf="skeleton; else elseBlock2">
+            <p-skeleton height="18px"></p-skeleton>
+            <p-skeleton styleClass="mt-2" height="18px" width="200px"></p-skeleton>
+            <p-skeleton styleClass="mt-2" height="14px" width="150px"></p-skeleton>
+            <p-skeleton styleClass="mt-2" height="14px" width="200px"></p-skeleton>
+        </div>
+        <ng-template #elseBlock2>
+            <p class="card-3 font-weight-medium mt-1" style="color: var(--dark-green-color); text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{offer?.offerDetails?.title}}</p>
+            <p class="card-3 font-weight-medium">{{offer?.offerDetails?.price!.toString()| rank}} ₽</p>
+            <p class="card-5">{{offer?.userDetails?.name}} <i class="bi bi-star-fill" style="color: var(--yealow-color);"></i> {{offer?.userDetails?.rating}}</p>
+            <p class="card-5 font-weight-medium" style="color: var(--gray-color); text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{offer?.userDetails?.dormitoryAdress?.dormitoryName}}</p>
+        </ng-template>
     </div>
 </div>

@@ -1,20 +1,6 @@
+<app-header></app-header>
 <div class="container">
-  <div class="row">
-      <app-header></app-header>
-      <app-search class="col-10 offset-1"></app-search>
-  </div>
-  <div class="row mt-5">
-      <app-slider class="col-4"></app-slider>
-      <app-check-box label="CB1" class="mt-5"></app-check-box>
-      <app-check-box label="CB2" class="mt-5"></app-check-box>
-      <app-check-box label="CB3" class="mt-5"></app-check-box>
-  </div>
-  <div class="row mt-5">
-      <app-galleria class="col-6" [images]="images"></app-galleria>
-  </div>
-  <div class="row my-5 col-8">
-      <app-card class="col-4" name="Макар" price="3000000" rating="5" title="Очки крутые гучи настолько крутый что сам" src=".././assets/glasses.jpg" address="ул.Вершинина 46 ул.Вершинина 46 ул.Вершинина 46"></app-card>
-      <app-card class="col-4" name="Катя" price="123000" rating="4.6" title="Наушники Dolbit Normal`no" src=".././assets/kate.jpg" address="Вершинина 39"></app-card>
-      <app-card class="col-4" name="Даниил" price="1500" rating="4.5" title="Экскурсии по мостам Томска" src=".././assets/bridge.jpg" address="Вершинина 48"></app-card>
-  </div>
+    <div class="col-12">
+        <router-outlet></router-outlet>
+    </div>
 </div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row" style="margin-top: 32px;">
+        <div class="col-3">
+            <div class="accordion border-bottom" id="accordionPanelsStayOpenExample" >
+                <div class="accordion-item" *ngIf="category?.categoryId?.length !== 1">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                      Тип объявления
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                      <app-check-box *ngFor="let category of category?.childrenCategory" [label]="category.name"></app-check-box>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                      Местоположение
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        <app-check-box *ngFor="let dormitory of dormitories" [label]="dormitory.dormitoryName"></app-check-box>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                      Цена
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                      <app-slider [min]="minPrice" [max]="maxPrice"></app-slider>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-9">
+            <input [(ngModel)]="photo" type="file" placeholder="Выберите файл"/>
+            <app-carousel *ngIf="category?.categoryId?.length === 1" (onClick)="categoryClick($event)" [categories]="category?.childrenCategory"></app-carousel>
+            <div style="margin-bottom: 35px;" class="d-flex">
+                <h3>Объявления из категории "{{category?.name}}"</h3><h3 class="ms-2" style="color: var(--gray-color);">{{overalAmount}}</h3>
+            </div>
+            <div class="row">
+                <app-card class="col-xl-4 col-12 col-md-6" style="margin-bottom: 20px;" *ngFor="let offer of offers" [offer]="offer"></app-card>
+            </div>
+        </div>
+        <app-paginator *ngIf="overalAmount" class="my-5" [totalOnOnePage]="offerService.OFFER_DISPLAYEAD" [totalRecords]="overalAmount"></app-paginator>
+    </div>
+</div>

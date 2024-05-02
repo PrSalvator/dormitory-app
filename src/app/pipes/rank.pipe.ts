@@ -4,9 +4,10 @@ import { Pipe, PipeTransform } from "@angular/core";
     name: "rank"
 })
 export class RankPipe implements PipeTransform {
-  transform(value: string): string {
-    value = this.format_number(value, '');
-    return value;
+  transform(value?: string): string {
+    let result = "";
+    if(value) result = this.format_number(value, ''); 
+    return result;
   }
   format_number(number:string, prefix:string) {
     let thousand_separator = ' ',

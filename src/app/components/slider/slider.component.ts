@@ -6,7 +6,7 @@ import { Component, Input} from '@angular/core';
   styleUrl: './slider.component.css'
 })
 export class SliderComponent{
-  values:number[] = [254, 690];
+  values:number[] = [254, 5000];
   @Input() min: any = null;
   @Input() max:any = null;
 

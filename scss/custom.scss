@@ -1,0 +1,110 @@
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$headings-font-weight: $font-weight-bold;
+
+$font-family-base: Roboto;
+
+$h1-font-size:                $font-size-base * 2.125;
+$h2-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * 1.5;
+     
+$basic-6: normal normal 400 0.875rem $font-family-base;
+$basic-5: normal normal 400 1rem $font-family-base;
+$basic-4: normal normal 400 1.125rem $font-family-base;
+$basic-3: normal normal 400 1.25rem $font-family-base;
+$basic-2: normal normal 400 1.375rem $font-family-base;
+$basic-1: normal normal 400 1.5rem $font-family-base;
+
+.basic-1{
+    font: $basic-1;
+}
+.basic-2{
+    font: $basic-2;
+}
+.basic-3{
+    font: $basic-3;
+}
+.basic-4{
+    font: $basic-4;
+}
+.basic-5{
+    font: $basic-5;
+}
+.basic-6{
+    font: $basic-6;
+}
+
+
+//Меню
+.menu{
+    font: $basic-3;
+    font-weight: 500;
+}
+
+//Кнопки
+
+$button-1: normal normal 400 1rem $font-family-base;
+$button-2: normal normal 400 0.75rem $font-family-base;
+
+.button-1{
+    font-size: 1rem;
+}
+.button-2{
+    font: 0.75rem;
+}
+
+//Карточки товара
+$card-1s: normal normal 600 1.5rem $font-family-base;
+
+$card-2m: normal normal 500 1.25rem $font-family-base;
+
+$card-3m: normal normal 500 1.125rem $font-family-base;
+
+$card-4m: normal normal 500 1rem $font-family-base;
+
+$card-5: normal normal 400 0.875rem $font-family-base;
+$card-5m: normal normal 500 0.875rem $font-family-base;
+
+$card-6: normal normal 400 0.75rem $font-family-base;
+$card-6m: normal normal 500 0.75rem $font-family-base;
+
+
+.card-1{
+    font-size: 1.5rem;
+}
+.card-2{
+    font-size: 1.25rem;
+}
+.card-3{
+    font-size: 1.125rem;
+}
+.card-4{
+    font-size: 1rem;
+}
+.card-5{
+    font-size: 0.875rem;
+}
+.card-6{
+    font-size: 0.75rem;
+}
+
+.font-weight-medium{
+    font-weight: $font-weight-medium;
+}
+.font-weight-semibold{
+    font-weight: $font-weight-semibold;
+}
+
+//Кастомизация accordion
+//$accordion-bg: transparent;
+$accordion-border-color: var(--limpid-gray-color);
+$accordion-button-active-bg:  transparent;
+$accordion-button-focus-box-shadow: 0;
+$accordion-border-width: 0;
+$accordion-button-padding-x:  20px;
+$accordion-button-padding-y:  18px;
+$accordion-body-padding-x: 0px;
+$accordion-body-padding-y: 0px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

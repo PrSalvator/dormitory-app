@@ -1,0 +1,10 @@
+<p-carousel *ngIf="!skeleton; else elseBlock" [value]="categories" [numVisible]="8" [numScroll]="8" [circular]="false">
+    <ng-template let-category pTemplate="item">
+        <div (click)="categoryClick(category)" style="background-color: lightgray;" class="p-3 rounded-3 mx-2">
+            {{category.name}}
+        </div>
+    </ng-template>
+</p-carousel>
+<ng-template #elseBlock>
+    <p-skeleton width="100%" height="50px"></p-skeleton>
+</ng-template>
